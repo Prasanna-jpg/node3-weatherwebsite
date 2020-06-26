@@ -15,7 +15,7 @@ const forecast=(latitude,longitude,callback)=>{
     const temp=response.body.current.temperature
            const  precip=response.body.current.precip
            
-    callback(undefined,response.body.location.timezone_id+' It is currently '+ temp+ ' degrees  out. It feels like '+precip+' out')
+    callback(undefined,response.body.location.timezone_id+' It is currently '+ temp+ ' degrees  out. It feels like '+precip+' out'+' and the humidity is '+response.body.current.humidity)
 }
     })
 }
